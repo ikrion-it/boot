@@ -1,0 +1,327 @@
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+	webhookUrl: 'https://ikrion.app.n8n.cloud/webhook/b4a537a9-91e6-40c1-bd4c-aefe4da078c1/chat',
+	webhookConfig: {
+		method: 'POST',
+		headers: {}
+	},
+	target: '#n8n-chat',
+	mode: 'window',
+	chatInputKey: 'chatInput',
+	chatSessionKey: 'sessionId',
+	loadPreviousSession: true,
+	metadata: {},
+	showWelcomeScreen: false,
+	defaultLanguage: 'pt',
+	initialMessages: [
+		'Olá, o que você quer saber sobre sua apólice'
+	],
+	i18n: {
+		pt: {
+			title: 'Ola, seja bem-vindo',
+			subtitle: "Como posso ajudar?",
+			footer: '',
+			getStarted: 'Nova conversa',
+			inputPlaceholder: 'Digite sua pergunta..',
+		},
+	},
+});
+</script>
+
+<script lang="ts" setup>
+// App.vue
+import { onMounted } from 'vue';
+import '@n8n/chat/style.css';
+import { createChat } from '@n8n/chat';
+
+onMounted(() => {
+	createChat({
+		webhookUrl: 'YOUR_PRODUCTION_WEBHOOK_URL'
+	});
+});
+
+
+
+</script>
+<template>
+	<div></div>
+</template>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AutoWhats IA - Automação WhatsApp com Inteligência Artificial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background-color: #f9fafb;
+    }
+
+    header {
+      background: linear-gradient(to right, #10b981, #06b6d4);
+      color: white;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .btn-whatsapp {
+      background-color: white;
+      color: #047857;
+      padding: 0.5rem 1.5rem;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #e5e7eb;
+    }
+
+    .hero {
+      background-color: white;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      max-width: 800px;
+      margin: 0 auto 1rem;
+      font-weight: 800;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #6b7280;
+      margin-bottom: 2rem;
+    }
+
+    .hero .btn-primary {
+      background-color: #10b981;
+      color: white;
+      padding: 0.75rem 2rem;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .hero .btn-primary:hover {
+      background-color: #069c70;
+    }
+
+    section {
+      padding: 4rem 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Formulário */
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #d1d5db;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+
+    form button {
+      background-color: #10b981;
+      color: white;
+      padding: 1rem;
+      width: 100%;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #069c70;
+    }
+
+    .card-form {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    /* Serviços */
+    .grid-servicos {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .servico {
+      background-color: #f3f4f6;
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .servico:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+
+    .servico h4 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    /* FAQ */
+    .faq {
+      background-color: #f9fafb;
+    }
+
+    .faq h3 {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .faq-item h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      background-color: #1f2937;
+      color: #d1d5db;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .hero h2 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>AutoWhats IA</h1>
+    <a href=" https://wa.me/5511999999999 " target="_blank" class="btn-whatsapp">Falar com Especialista</a>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div>
+      <h2>Automatize seus processos no WhatsApp com Inteligência Artificial</h2>
+      <p>Transforme sua comunicação e aumente suas vendas com soluções inteligentes.</p>
+      <a href="#orcamento" class="btn-primary">Solicitar Orçamento</a>
+    </div>
+  </section>
+
+  <!-- Formulário de Orçamento -->
+  <section id="orcamento">
+    <div class="container card-form">
+      <h3 class="text-2xl font-bold mb-6 text-center">Solicite seu Orçamento</h3>
+      <form action="#" method="POST">
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+          <input type="text" name="nome" placeholder="Nome" required />
+          <input type="email" name="email" placeholder="Email" required />
+        </div>
+        <input type="tel" name="telefone" placeholder="Telefone" />
+        <textarea name="mensagem" rows="4" placeholder="Descreva sua necessidade..."></textarea>
+        <button type="submit">Enviar Solicitação</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section>
+    <div class="container">
+      <h3 class="text-3xl font-bold text-center mb-12">Nossos Principais Serviços</h3>
+      <div class="grid-servicos">
+        <div class="servico">
+          <h4>Automação de WhatsApp com I.A.</h4>
+          <p>Responda automaticamente mensagens, agende atendimentos e interaja com clientes 24/7 usando IA avançada.</p>
+        </div>
+        <div class="servico">
+          <h4>Analytics para Dados</h4>
+          <p>Colete dados estratégicos e tome decisões baseadas em métricas reais do comportamento dos seus clientes.</p>
+        </div>
+        <div class="servico">
+          <h4>Campanhas em Massa</h4>
+          <p>Envie campanhas personalizadas para milhares de contatos simultaneamente com alta taxa de abertura.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <h3>Perguntas Frequentes</h3>
+      <div class="faq-item">
+        <h4>Como a automação com IA pode melhorar minhas vendas?</h4>
+        <p>Com resposta instantânea e personalização automática, os clientes têm uma experiência mais rápida e eficiente, resultando em maior conversão e fidelização.</p>
+      </div>
+      <div class="faq-item">
+        <h4>É possível integrar com sistemas existentes?</h4>
+        <p>Sim! Oferecemos integração com CRM, ERP e outras ferramentas para garantir que tudo funcione de forma conectada.</p>
+      </div>
+      <div class="faq-item">
+        <h4>O envio em massa respeita regras do WhatsApp?</h4>
+        <p>Totalmente. Usamos métodos autorizados pelo WhatsApp Business API, garantindo segurança e conformidade legal.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Como posso começar a usar?</h4>
+        <p>Basta preencher o formulário acima ou clicar em “Falar com Especialista” para agendar uma consultoria gratuita.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; {{ new Date().getFullYear() }} AutoWhats IA. Todos os direitos reservados.</p>
+    <p class="mt-2 text-sm">Automatizando seu futuro com inteligência artificial.</p>
+  </footer>
+
+</body>
+</html>
+
