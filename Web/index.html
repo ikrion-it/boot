@@ -239,89 +239,227 @@ onMounted(() => {
     }
   </style>
 </head>
-<body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Automação de Processos para WhatsApp com I.A</title>
+  <script src="https://cdn.tailwindcss.com "></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
 
   <!-- Header -->
-  <header>
-    <h1>AutoWhats IA</h1>
-    <a href=" https://wa.me/5511999999999 " target="_blank" class="btn-whatsapp">Falar com Especialista</a>
+  <header class="bg-gradient-to-r from-green-500 to-teal-400 text-white py-16 px-6 md:px-12 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
+      Automação de Processos para WhatsApp com Inteligência Artificial
+    </h1>
+    <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">
+      Transforme sua comunicação. Automatize atendimentos, aumente vendas e centralize dados com nossa solução inovadora.
+    </p>
+    <a href="https://wa.me/5511999999999 "
+       target="_blank"
+       rel="noopener noreferrer"
+       class="inline-block bg-white text-green-600 font-semibold py-3 px-8 rounded-full shadow hover:bg-gray-100 transition duration-300">
+      Falar com um Especialista
+    </a>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div>
-      <h2>Automatize seus processos no WhatsApp com Inteligência Artificial</h2>
-      <p>Transforme sua comunicação e aumente suas vendas com soluções inteligentes.</p>
-      <a href="#orcamento" class="btn-primary">Solicitar Orçamento</a>
-    </div>
-  </section>
-
-  <!-- Formulário de Orçamento -->
-  <section id="orcamento">
-    <div class="container card-form">
-      <h3 class="text-2xl font-bold mb-6 text-center">Solicite seu Orçamento</h3>
-      <form action="#" method="POST">
-        <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
-          <input type="text" name="nome" placeholder="Nome" required />
-          <input type="email" name="email" placeholder="Email" required />
-        </div>
-        <input type="tel" name="telefone" placeholder="Telefone" />
-        <textarea name="mensagem" rows="4" placeholder="Descreva sua necessidade..."></textarea>
-        <button type="submit">Enviar Solicitação</button>
+  <!-- Solicitar Orçamento -->
+  <section class="py-16 bg-gray-100 px-6 md:px-12">
+    <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">Solicite seu Orçamento</h2>
+      <form class="space-y-4">
+        <input type="text" placeholder="Nome completo" class="w-full p-3 border border-gray-300 rounded" required />
+        <input type="email" placeholder="E-mail" class="w-full p-3 border border-gray-300 rounded" required />
+        <textarea placeholder="Descreva suas necessidades..." rows="4" class="w-full p-3 border border-gray-300 rounded" required></textarea>
+        <button type="submit"
+                class="w-full bg-green-500 text-white font-semibold py-3 rounded hover:bg-green-600 transition duration-300">
+          Enviar Solicitação
+        </button>
       </form>
     </div>
   </section>
 
   <!-- Serviços -->
-  <section>
-    <div class="container">
-      <h3 class="text-3xl font-bold text-center mb-12">Nossos Principais Serviços</h3>
-      <div class="grid-servicos">
-        <div class="servico">
-          <h4>Automação de WhatsApp com I.A.</h4>
-          <p>Responda automaticamente mensagens, agende atendimentos e interaja com clientes 24/7 usando IA avançada.</p>
+  <section class="py-16 px-6 md:px-12 bg-white">
+    <h2 class="text-3xl font-bold text-center mb-12">Nossos Principais Serviços</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg transition duration-300">
+        <h3 class="text-xl font-semibold mb-2">Automação de WhatsApp com IA</h3>
+        <p>Respostas inteligentes, interações personalizadas e atendimento 24/7 com assistentes virtuais.</p>
+      </div>
+      <div class="border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg transition duration-300">
+        <h3 class="text-xl font-semibold mb-2">Análise de Dados</h3>
+        <p>Relatórios completos sobre engajamento, conversões e comportamento do cliente em tempo real.</p>
+      </div>
+      <div class="border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg transition duration-300">
+        <h3 class="text-xl font-semibold mb-2">Campanhas em Massa</h3>
+        <p>Envie mensagens segmentadas e programadas sem violar políticas do WhatsApp.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quem Somos -->
+  <section class="py-16 px-6 md:px-12 bg-gray-100 flex flex-col md:flex-row items-center gap-8 max-w-6xl mx-auto">
+    <div class="md:w-1/2">
+      <img src="https://placehold.co/600x400 " alt="Quem Somos" class="rounded-lg shadow-md w-full" />
+    </div>
+    <div class="md:w-1/2">
+      <h2 class="text-3xl font-bold mb-4">Quem Somos</h2>
+      <p class="mb-4">
+        Somos uma empresa especializada em automação de processos via WhatsApp, combinando tecnologia avançada com inteligência artificial para transformar a maneira como empresas se conectam com seus clientes.
+      </p>
+      <p>
+        Nossa missão é simplificar a comunicação empresarial e maximizar resultados através da inovação digital.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-4">
+        <img src="https://placehold.co/100x50?text=ChatGPT" alt="ChatGPT" class="h-8 object-contain" />
+        <img src=" https://placehold.co/100x50?text=n8n" alt="n8n" class="h-8 object-contain" />
+        <img src=" https://placehold.co/100x50?text=WhatsApp" alt="WhatsApp" class="h-8 object-contain" />
+        <img src=" https://placehold.co/100x50?text=Google+Cloud" alt="Google Cloud" class="h-8 object-contain" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Descubra tudo que é possível fazer -->
+  <section class="py-16 px-6 md:px-12 bg-white">
+    <h2 class="text-3xl font-bold text-center mb-12">Descubra Tudo que é Possível Fazer</h2>
+    <div class="max-w-6xl mx-auto space-y-12">
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="md:w-1/2">
+          <img src=" https://placehold.co/600x400?text=Organize+Seu+Atendimento" alt="Organize Seu Atendimento" class="rounded-lg shadow-md w-full" />
         </div>
-        <div class="servico">
-          <h4>Analytics para Dados</h4>
-          <p>Colete dados estratégicos e tome decisões baseadas em métricas reais do comportamento dos seus clientes.</p>
+        <div class="md:w-1/2">
+          <h3 class="text-xl font-semibold mb-2">Organize Seu Atendimento de Forma Integrada</h3>
+          <p>
+            Conecte todos os canais de comunicação em uma única plataforma e gerencie tudo no mesmo lugar.
+          </p>
         </div>
-        <div class="servico">
-          <h4>Campanhas em Massa</h4>
-          <p>Envie campanhas personalizadas para milhares de contatos simultaneamente com alta taxa de abertura.</p>
+      </div>
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="md:w-1/2 order-last md:order-first">
+          <img src=" https://placehold.co/600x400?text=Atendimento+Automatico" alt="Atendimento Automático" class="rounded-lg shadow-md w-full" />
+        </div>
+        <div class="md:w-1/2">
+          <h3 class="text-xl font-semibold mb-2">Atendimento Automático e Ininterrupto</h3>
+          <p>
+            Ofereça respostas imediatas aos seus clientes, mesmo fora do expediente comercial.
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="md:w-1/2">
+          <img src=" https://placehold.co/600x400?text=Centralize+Cadastro" alt="Centralize Cadastro" class="rounded-lg shadow-md w-full" />
+        </div>
+        <div class="md:w-1/2">
+          <h3 class="text-xl font-semibold mb-2">Centralize os Cadastros de Seus Clientes</h3>
+          <p>
+            Mantenha todas as informações dos clientes organizadas e acessíveis em tempo real.
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="md:w-1/2 order-last md:order-first">
+          <img src=" https://placehold.co/600x400?text=Optimize+Tickets" alt="Otimize Gestão de Tickets" class="rounded-lg shadow-md w-full" />
+        </div>
+        <div class="md:w-1/2">
+          <h3 class="text-xl font-semibold mb-2">Otimize a Gestão de Tickets</h3>
+          <p>
+            Resolva problemas mais rapidamente com uma gestão eficiente de solicitações e acompanhamento automatizado.
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="md:w-1/2">
+          <img src=" https://placehold.co/600x400?text=Dashboards" alt="Gerencie Dashboards" class="rounded-lg shadow-md w-full" />
+        </div>
+        <div class="md:w-1/2">
+          <h3 class="text-xl font-semibold mb-2">Gerencie Dashboards com Eficiência</h3>
+          <p>
+            Acompanhe KPIs em tempo real e tome decisões baseadas em dados reais e atualizados.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="faq">
-    <div class="container">
-      <h3>Perguntas Frequentes</h3>
-      <div class="faq-item">
-        <h4>Como a automação com IA pode melhorar minhas vendas?</h4>
-        <p>Com resposta instantânea e personalização automática, os clientes têm uma experiência mais rápida e eficiente, resultando em maior conversão e fidelização.</p>
+  <section class="py-16 px-6 md:px-12 bg-gray-100">
+    <h2 class="text-3xl font-bold text-center mb-10">Perguntas Frequentes</h2>
+    <div class="max-w-3xl mx-auto space-y-4">
+      <div class="border border-gray-300 rounded-lg overflow-hidden">
+        <button onclick="toggleFaq(0)"
+                class="w-full text-left px-6 py-4 focus:outline-none flex justify-between items-center bg-white hover:bg-gray-50 transition">
+          <span class="font-medium">Como a automação com IA pode melhorar minhas vendas?</span>
+          <span id="faq-toggle-0" class="transition-transform duration-300">+</span>
+        </button>
+        <div id="faq-answer-0" class="hidden px-6 pb-4 pt-2 bg-gray-50 text-gray-700">
+          A automação permite responder leads instantaneamente, qualificar contatos e oferecer recomendações personalizadas, aumentando taxas de conversão.
+        </div>
       </div>
-      <div class="faq-item">
-        <h4>É possível integrar com sistemas existentes?</h4>
-        <p>Sim! Oferecemos integração com CRM, ERP e outras ferramentas para garantir que tudo funcione de forma conectada.</p>
+
+      <div class="border border-gray-300 rounded-lg overflow-hidden">
+        <button onclick="toggleFaq(1)"
+                class="w-full text-left px-6 py-4 focus:outline-none flex justify-between items-center bg-white hover:bg-gray-50 transition">
+          <span class="font-medium">É possível integrar com sistemas existentes?</span>
+          <span id="faq-toggle-1" class="transition-transform duration-300">+</span>
+        </button>
+        <div id="faq-answer-1" class="hidden px-6 pb-4 pt-2 bg-gray-50 text-gray-700">
+          Sim! Nosso sistema se integra facilmente com CRMs, ERPs, plataformas de marketing e outros softwares já utilizados por sua empresa.
+        </div>
       </div>
-      <div class="faq-item">
-        <h4>O envio em massa respeita regras do WhatsApp?</h4>
-        <p>Totalmente. Usamos métodos autorizados pelo WhatsApp Business API, garantindo segurança e conformidade legal.</p>
+
+      <div class="border border-gray-300 rounded-lg overflow-hidden">
+        <button onclick="toggleFaq(2)"
+                class="w-full text-left px-6 py-4 focus:outline-none flex justify-between items-center bg-white hover:bg-gray-50 transition">
+          <span class="font-medium">O envio em massa respeita as regras do WhatsApp?</span>
+          <span id="faq-toggle-2" class="transition-transform duration-300">+</span>
+        </button>
+        <div id="faq-answer-2" class="hidden px-6 pb-4 pt-2 bg-gray-50 text-gray-700">
+          Totalmente. Garantimos conformidade com as políticas do WhatsApp, evitando bloqueios e mantendo sua conta segura.
+        </div>
       </div>
-      <div class="faq-item">
-        <h4>Como posso começar a usar?</h4>
-        <p>Basta preencher o formulário acima ou clicar em “Falar com Especialista” para agendar uma consultoria gratuita.</p>
+
+      <div class="border border-gray-300 rounded-lg overflow-hidden">
+        <button onclick="toggleFaq(3)"
+                class="w-full text-left px-6 py-4 focus:outline-none flex justify-between items-center bg-white hover:bg-gray-50 transition">
+          <span class="font-medium">Como posso começar a usar?</span>
+          <span id="faq-toggle-3" class="transition-transform duration-300">+</span>
+        </button>
+        <div id="faq-answer-3" class="hidden px-6 pb-4 pt-2 bg-gray-50 text-gray-700">
+          Basta preencher o formulário acima ou falar com um especialista clicando no botão no topo da página. Faremos uma análise gratuita da sua operação e proposta personalizada.
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; {{ new Date().getFullYear() }} AutoWhats IA. Todos os direitos reservados.</p>
-    <p class="mt-2 text-sm">Automatizando seu futuro com inteligência artificial.</p>
+  <footer class="bg-gray-800 text-white py-8 px-6 md:px-12 text-center">
+    <p>&copy; 2025 Sua Empresa de Automação WhatsApp. Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+    function toggleFaq(index) {
+      const answer = document.getElementById('faq-answer-' + index);
+      const toggle = document.getElementById('faq-toggle-' + index);
+      if (answer.classList.contains('hidden')) {
+        answer.classList.remove('hidden');
+        toggle.textContent = "−";
+      } else {
+        answer.classList.add('hidden');
+        toggle.textContent = "+";
+      }
+    }
+  </script>
 
 </body>
 </html>
+
+
 
