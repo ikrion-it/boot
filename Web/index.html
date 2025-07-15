@@ -459,31 +459,28 @@ onMounted(() => {
       }
     }
 
-    (function() {
-    emailjs.init("P3w3nANQSU9yApzXf"); // Substitua pelo seu PUBLIC KEY
-   })();
+emailjs.init("P3w3nANQSU9yApzXf"); // use sua public key
 
-  document.getElementById('orcamento-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+  document.getElementById('orcamento-form')
+    .addEventListener('submit', function(e) {
+      e.preventDefault();
 
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    const mensagem = document.getElementById('mensagem').value;
-
-    const templateParams = {
-      nome_cliente: nome,
-      email_cliente: email,
-      mensagem_cliente: mensagem
-    };
-
-    emailjs.send('service_whb5l6m', 'template_Orcamento', templateParams)
-      .then(function(response) {
-        document.getElementById('status').innerText = 'Solicitação enviada com sucesso!';
-      }, function(error) {
-        document.getElementById('status').innerText = 'Erro ao enviar. Tente novamente.';
-        console.error('EmailJS error:', error);
+      emailjs.sendForm(
+        'service_whb5l6m',
+        'template_Orcamento',
+        this
+      )
+      .then(() => {
+        document.getElementById('status').innerText = 'Enviado com sucesso!';
+        this.reset();
+      })
+      .catch(err => {
+        console.error('Erro:', err);
+        document.getElementById('status').innerText = 'Erro no envio. Tente novamente.';
       });
-  });
+    });
+
+  
 	  
   </script>
 
