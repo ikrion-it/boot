@@ -473,13 +473,13 @@ onMounted(() => {
         this
       )
       .then(() => {
-        document.getElementById('status').innerText = 'Enviado com sucesso!';
+        
 	alert('Formulário enviado com sucesso!');
         this.reset();
       })
       .catch(err => {
         console.error('Erro:', err);
-        document.getElementById('status').innerText = 'Erro no envio. Tente novamente.';
+        
 	alert('Formulário nao enviado!');
       });
     });
