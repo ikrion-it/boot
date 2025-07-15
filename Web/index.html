@@ -445,7 +445,11 @@ onMounted(() => {
   <footer class="bg-gray-800 text-white py-8 px-6 md:px-12 text-center">
     <p>&copy; 2025 Sua Empresa de Automação WhatsApp. Todos os direitos reservados.</p>
   </footer>
-
+	
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init("P3w3nANQSU9yApzXf"); // Substitua aqui
+</script>
   <script>
     function toggleFaq(index) {
       const answer = document.getElementById('faq-answer-' + index);
@@ -459,8 +463,6 @@ onMounted(() => {
       }
     }
 
-emailjs.init("P3w3nANQSU9yApzXf"); // use sua public key
-
   document.getElementById('orcamento-form')
     .addEventListener('submit', function(e) {
       e.preventDefault();
@@ -472,11 +474,13 @@ emailjs.init("P3w3nANQSU9yApzXf"); // use sua public key
       )
       .then(() => {
         document.getElementById('status').innerText = 'Enviado com sucesso!';
+	alert('Formulário enviado com sucesso!');
         this.reset();
       })
       .catch(err => {
         console.error('Erro:', err);
         document.getElementById('status').innerText = 'Erro no envio. Tente novamente.';
+	alert('Formulário nao enviado!');
       });
     });
 
