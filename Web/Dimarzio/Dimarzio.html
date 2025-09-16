@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimarzio Seguros - Proteção e confiança há 20 anos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(to bottom right, #f0f9ff, #e6f3ff);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px 0;
+        }
+        
+        .logo {
+            height: 80px;
+            object-fit: contain;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        h1, h2, h3 {
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #1e3a8a;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .hero-image {
+            width: 100%;
+            max-width: 800px;
+            margin: 40px auto;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin: 40px 0;
+        }
+        
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card h3 {
+            color: #2563eb;
+            margin-bottom: 15px;
+        }
+        
+        .benefits-list {
+            list-style: none;
+        }
+        
+        .benefits-list li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .benefits-list li:before {
+            content: "✓";
+            color: #2563eb;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .problem-list li:before {
+            content: "⚠️";
+            position: absolute;
+            left: 0;
+        }
+        
+        .partners {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .partner-logo {
+            height: 60px;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+        
+        .partner-logo:hover {
+            filter: grayscale(0%);
+        }
+        
+        .upload-section {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        .upload-area {
+            border: 2px dashed #94a3b8;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 30px 0;
+            transition: border-color 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .upload-area:hover {
+            border-color: #3b82f6;
+        }
+        
+        .upload-icon {
+            width: 64px;
+            height: 64px;
+            background: #dbeafe;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: #2563eb;
+        }
+        
+        .upload-btn {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .upload-btn:hover {
+            background: #1d4ed8;
+        }
+        
+        .upload-btn:disabled {
+            background: #94a3b8;
+            cursor: not-allowed;
+        }
+        
+        .stats-banner {
+            background: linear-gradient(90deg, #2563eb, #1e40af);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 60px 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            background: #1e293b;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .card {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="https://www.dimarzioseguros.com.br/_next/image?url=%2Fimages%2Fwebp%2Fhero-dimarzioseguros.webp&w=3840&q=85" alt="Dimarzio Seguros" class="logo">
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <h1>Já imaginou descobrir que seu seguro não garante que você receberá sua indenização?</h1>
+                <p>A Dimarzio Seguros oferece uma consultoria gratuita para revisar ou montar o seu seguro do jeito certo. Com cobertura que realmente protege, sem pagar a mais, sem letras miúdas.</p>
+                
+                <img src="https://www.dimarzioseguros.com.br/_next/image?url=%2Fimages%2Fwebp%2Fhero-dimarzioseguros.webp&w=3840&q=85" alt="Dimarzio Seguros - Proteção e confiança há 20 anos" class="hero-image">
+                
+                <h2>Você já tem um seguro, mas será que ele protege o que importa?</h2>
+                <p>Com mais de 20 anos de experiência e mais de 20.000 clientes atendidos, a Dimarzio Seguros entrega um plano ajustado à sua realidade, sem empurrar nada, sem cobrar pela consultoria.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Trabalhamos com as melhores seguradoras do mercado</h2>
+                <div class="partners">
+                    <img src="https://www.dimarzioseguros.com.br/_next/image?url=%2Fimages%2Fwebp%2Fporto-seguros.webp&w=256&q=75" alt="Porto Seguro" class="partner-logo">
+                    <img src="https://www.dimarzioseguros.com.br/_next/image?url=%2Fimages%2Fwebp%2Fbradesco-seguros.webp&w=256&q=75" alt="Bradesco Seguros" class="partner-logo">
+                    <img src="https://www.dimarzioseguros.com.br/_next/image?url=%2Fimages%2Fwebp%2Fitau-seguros.webp&w=256&q=75" alt="Itaú Seguros" class="partner-logo">
+                    <img src="https://www.dimarzioseguros.com.br/_next/image?url=%2Fimages%2Fwebp%2Fallianz-seguros.webp&w=256&q=75" alt="Allianz" class="partner-logo">
+                    <img src="https://www.dimarzioseguros.com.br/_next/image?url=%2Fimages%2Fwebp%2Fmapre-seguros.webp&w=256&q=75" alt="Mapfre" class="partner-logo">
+                    <img src="https://www.dimarzioseguros.com.br/_next/image?url=%2Fimages%2Fwebp%2Fhdi-seguros.webp&w=256&q=75" alt="HDI Seguros" class="partner-logo">
+                </div>
+                <p style="text-align: center;">E muitas outras seguradoras parceiras para oferecer as melhores opções para você</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Por que escolher a Dimarzio?</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <h3>Benefícios</h3>
+                        <ul class="benefits-list">
+                            <li>Te explicamos o que a seguradora não te conta</li>
+                            <li>Você economiza onde dá sem abrir mão do essencial</li>
+                            <li>Seu seguro passa a falar a sua língua</li>
+                            <li>Atendimento técnico de verdade</li>
+                            <li>Suporte completo, inclusive em sinistro</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Problemas comuns</h3>
+                        <ul class="benefits-list problem-list">
+                            <li>3 em cada 5 sinistros são negados por erro na contratação</li>
+                            <li>Cobertura errada - não protege o que realmente importa</li>
+                            <li>Cláusulas escondidas - letras miúdas que você só descobre depois</li>
+                            <li>Seguro mal explicado - falta de orientação técnica adequada</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="upload-section">
+                    <h2>Envie seus documentos</h2>
+                    <p>Faça upload dos seus documentos em PDF para análise da nossa equipe.</p>
+                    
+                    <div class="upload-area" id="drop-area">
+                        <div class="upload-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                        </div>
+                        <input type="file" id="file-input" accept="application/pdf" style="display: none;">
+                        <p id="file-name">Clique ou arraste um arquivo PDF aqui</p>
+                        <button class="upload-btn" id="upload-btn" disabled>Enviar Documento</button>
+                        <p id="status-message" style="margin-top: 15px; min-height: 20px;"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Seu seguro protege ou é só papel?</h2>
+                <p>Entre em contato agora e receba um atendimento com a agilidade e atenção que você merece!</p>
+                
+                <div class="stats-banner">
+                    Já ajudamos mais de 20.000 pessoas a corrigirem erros no seguro sem gastar R$1 a mais.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Dimarzio Seguros, 20 anos protegendo com clareza.</p>
+            <p style="margin-top: 10px; opacity: 0.8;">CNPJ: 10.894.914/0001-05</p>
+        </div>
+    </footer>
+
+    <script>
+        const fileInput = document.getElementById('file-input');
+        const dropArea = document.getElementById('drop-area');
+        const fileName = document.getElementById('file-name');
+        const uploadBtn = document.getElementById('upload-btn');
+        const statusMessage = document.getElementById('status-message');
+        
+        // Click to select file
+        dropArea.addEventListener('click', () => {
+            fileInput.click();
+        });
+        
+        // File selection
+        fileInput.addEventListener('change', handleFiles);
+        
+        // Drag and drop functionality
+        dropArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropArea.style.borderColor = '#2563eb';
+        });
+        
+        dropArea.addEventListener('dragleave', () => {
+            dropArea.style.borderColor = '#94a3b8';
+        });
+        
+        dropArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropArea.style.borderColor = '#94a3b8';
+            
+            if (e.dataTransfer.files.length) {
+                handleFiles({ target: { files: e.dataTransfer.files } });
+            }
+        });
+        
+        function handleFiles(e) {
+            const file = e.target.files[0];
+            
+            if (file && file.type === 'application/pdf') {
+                fileName.textContent = file.name;
+                uploadBtn.disabled = false;
+                statusMessage.textContent = '';
+                statusMessage.style.color = '';
+            } else {
+                fileName.textContent = 'Clique ou arraste um arquivo PDF aqui';
+                uploadBtn.disabled = true;
+                statusMessage.textContent = 'Por favor, selecione um arquivo PDF válido.';
+                statusMessage.style.color = '#ef4444';
+            }
+        }
+        
+        uploadBtn.addEventListener('click', () => {
+            if (!uploadBtn.disabled) {
+                statusMessage.textContent = 'Enviando arquivo...';
+                statusMessage.style.color = '#3b82f6';
+                
+                // Simulate upload
+                setTimeout(() => {
+                    statusMessage.textContent = 'Arquivo enviado com sucesso!';
+                    statusMessage.style.color = '#10b981';
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+</html>
