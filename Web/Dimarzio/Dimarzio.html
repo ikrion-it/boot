@@ -287,11 +287,34 @@ onMounted(() => {
 <body>
     <header>
         <div class="container">
-            <img src="https://www.dimarzioseguros.com.br/_next/image?url=%2Fimages%2Fwebp%2Fhero-dimarzioseguros.webp&w=3840&q=85" alt="Dimarzio Seguros" class="logo">
+            
         </div>
     </header>
 
     <main>
+		  <section>
+            <div class="container">
+                <div class="upload-section">
+                    <h2>Envie suas Apolices</h2>
+                    <p>Faça upload dapolices para análise da nossa DimarzioAI</p>
+                    
+                    <div class="upload-area" id="drop-area">
+                        <div class="upload-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                        </div>
+                        <input type="file" id="file-input" accept="application/pdf" style="display: none;">
+                        <p id="file-name">Clique ou arraste um arquivo PDF aqui</p>
+                        <button class="upload-btn" id="upload-btn" disabled>Enviar Documento</button>
+                        <p id="status-message" style="margin-top: 15px; min-height: 20px;"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+		
         <section>
             <div class="container">
                 <h1>Já imaginou descobrir que seu seguro não garante que você receberá sua indenização?</h1>
@@ -347,28 +370,7 @@ onMounted(() => {
             </div>
         </section>
 
-        <section>
-            <div class="container">
-                <div class="upload-section">
-                    <h2>Envie seus documentos</h2>
-                    <p>Faça upload dos seus documentos em PDF para análise da nossa equipe.</p>
-                    
-                    <div class="upload-area" id="drop-area">
-                        <div class="upload-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                <polyline points="17 8 12 3 7 8"></polyline>
-                                <line x1="12" y1="3" x2="12" y2="15"></line>
-                            </svg>
-                        </div>
-                        <input type="file" id="file-input" accept="application/pdf" style="display: none;">
-                        <p id="file-name">Clique ou arraste um arquivo PDF aqui</p>
-                        <button class="upload-btn" id="upload-btn" disabled>Enviar Documento</button>
-                        <p id="status-message" style="margin-top: 15px; min-height: 20px;"></p>
-                    </div>
-                </div>
-            </div>
-        </section>
+      
 
         <section>
             <div class="container">
